@@ -4,12 +4,15 @@ import hmac
 import hashlib
 import requests
 import logging
+import os
 from typing import Dict, Optional, List
 
+
 # ======= CONFIG =======
+import os
 BASE_URL = "https://mock-api.roostoo.com"
-API_KEY = "SwFRgIdiUa31I01Kt4KVToVl5DKm33rByhL5x1GwQjCrmAvIJmkxMbJUIp8aeuhr"
-SECRET_KEY = "89o2vHX6BGa42fUVWPxt260EpV7uW64UpT6xjUYc0B6Qt2jhdMnxSDG0dU2q6utI"
+API_KEY = os.environ.get("ROOSTOO_API_KEY", "")
+SECRET_KEY = os.environ.get("ROOSTOO_SECRET_KEY", "")
 
 # Rate limiting
 _last_request_time = 0
