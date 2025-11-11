@@ -17,7 +17,7 @@ from strategy import generate_signals
 getcontext().prec = 28
 
 # ---- Config ----
-LOOP_INTERVAL = 30        # 15 minutes in seconds
+LOOP_INTERVAL = 900        # 15 minutes in seconds
 MAX_DRAWDOWN = 0.15        # 15% max drawdown
 MAX_API_ERRORS = 5
 COMMISSION_RATE = 0.001    # 0.1%
