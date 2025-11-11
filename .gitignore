@@ -1,0 +1,41 @@
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.venv/
+env/
+venv/
+
+# IDE / Editor settings
+.vscode/
+.idea/
+
+# Logs and local data
+logs/
+*.log
+data_cache/
+*.csv
+*.h5
+*.png
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Deployment / runtime stuff
+deploy/systemd/
+*.pid
+*.sock
+
+# Build / dist / packaging
+build/
+dist/
+*.egg-info/
+
+# Environment & config
+.env
+*.env
+config.json
+keys.json
