@@ -76,10 +76,10 @@ class HARModel:
         df['RV_D'] = daily_rv.shift(1)
         
         # RV_W: Average realized variance over previous 7 days
-        df['RV_W'] = daily_rv.rolling(window=7).mean().shift(1)
+        df['RV_W'] = daily_rv.rolling(window=3).mean().shift(1)
         
         # RV_M: Average realized variance over previous 30 days
-        df['RV_M'] = daily_rv.rolling(window=30).mean().shift(1)
+        df['RV_M'] = daily_rv.rolling(window=5).mean().shift(1)
         
         # Target: Next day's realized variance
         df['RV_target'] = daily_rv
@@ -89,7 +89,7 @@ class HARModel:
         
         return df
     
-    def fit(self, prices, min_training_days=60):
+    def fit(self, prices, min_training_days=3):
         """
         Fit the HAR model to historical price data.
         
